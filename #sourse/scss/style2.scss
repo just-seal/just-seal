@@ -1,0 +1,182 @@
+@import"null.scss";
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+body{font-family: Lato;}
+.wrapper{
+	height: 100vh;
+background-color: #f7f7f7	;
+}
+.header {
+	padding: 65px 0 0 0;
+	background: url(../img/sign2.png)  15%/auto 100%no-repeat;
+
+	height: 100vh;
+}
+.header__row {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.header-menu__column {
+	
+
+}
+.header-menu__item {}
+.menu__row{
+	display: flex;
+	li{
+		margin: 0 75px 0 0;
+		&:last-child{margin: 0;}
+		&:after{
+			content:'';
+			height: 3px;
+			width: 3px;
+			border-radius: 50%;
+			background-color:#4d4959;
+			position: absolute;
+			margin:6px 0 0 32px;
+		}
+		a{
+			font-size: 13px;
+			line-height: 1.2;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 0.2em;
+			color: #4d4959;
+			transition-duration: 0.7s;
+			&:hover{
+				color: #CC9900;
+			}
+		}
+		&:nth-child(2){
+			margin: 0 112px 0 0;
+			&:after{display: none;}
+		};
+		&:nth-child(3){
+			margin:0 75px 0 112px;
+		};
+		&:last-child{
+			&:after {
+				content: '';
+				display: none;
+			}
+		}
+	}
+}
+.header-logo__column{
+	position: absolute;
+}
+.header-logo__item {}
+.second-text {
+	display: none;
+}
+
+@media (max-width: 767px){
+	.second-text{
+		display:block;
+	}
+	.text{
+		display: none;
+	}
+	.header{
+		background: #4d4959;
+	}
+	.header-logo__column{
+		top: 35px;
+	}
+		.menu__row{
+			margin: 95px 0 0 0;
+			flex-direction: column;
+			align-items: center;
+			li{
+				padding: 0 0 45px 0;
+				margin: 0;
+				&:last-child{padding: 0;}
+				&:nth-child(2){
+					margin: 0;
+					display: block;
+				}
+				&:nth-child(3){
+					margin: 0;
+				}
+				a{
+					color: #fff;
+					font-size: 24px;
+				}
+			}
+		}
+}
+.text{
+	position: absolute;
+	width: 100%;
+	top:15%;
+	padding: 10% 20%;
+	span{
+		font-family: Lato;
+		font-size: 24px;
+		line-height: 34px;
+		font-weight: 400;
+		font-style: italic;
+		color: #848789;
+	}
+}
+.second-text {
+	background-color: #f7f7f7;
+	width: 100%;
+	padding: 10% 20%;
+	span{
+		font-family: Lato;
+		font-size: 24px;
+		line-height: 34px;
+		font-weight: 400;
+		font-style: italic;
+		color: #848789;
+}
+}
+.face{
+	
+	position: absolute;
+	top: 85%;
+	left: 5%;
+	animation-name: gosha;
+	animation-iteration-count: infinite;
+	animation-duration: 5s;
+	animation-direction: alternate;
+	animation-timing-function: linear;
+	height: 60px;
+	width: 60px;
+	border-radius: 30%;
+	img{
+		height: 60px;
+		width: 60px;
+		border-radius: 30%;
+		opacity: 0.6;
+	}
+	}
+@keyframes gosha{
+	0%{
+		left: 5%;
+		background-color: #FF0099;
+	}
+	20%{
+		left: 23%;
+		background-color: #FF6600;
+	}
+	40%{
+		left:41%;
+		background-color: #FFFF00;
+	}
+	60%{
+		left: 59%;
+		background-color: #33CC33;
+		
+	}
+	80%{
+		left:77%;
+		background-color: #00CCFF;
+	}
+	100%{
+		left:90%;
+		background-color: #9900CC;
+
+	}
+}
